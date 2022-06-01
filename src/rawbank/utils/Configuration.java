@@ -9,7 +9,7 @@ public class Configuration{
 	
 	public Properties get() {
 		try {
-			File file = new File("src/config.properties");
+			File file = new File("config.properties");
 			FileInputStream fis = new FileInputStream(file.getAbsoluteFile());
 			prop.load(fis);
 			fis.close();
