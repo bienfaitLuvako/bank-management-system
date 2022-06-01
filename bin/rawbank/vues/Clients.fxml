@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="990.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+				<Pane layoutX="60.0" layoutY="29.0" prefHeight="46.0" prefWidth="350.0" styleClass="sidePane,cards">
+					<children>
+						<ImageView fitHeight="25.0" fitWidth="28.0" layoutX="84.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../../img/icones/services.png" />
+							</image>
+						</ImageView>
+						<Label layoutX="119.0" layoutY="23.0" text="Services" textFill="#171717">
+							<font>
+								<Font name="Serif Regular" size="13.0" />
+							</font>
+						</Label>
+					</children>
+				</Pane>
+      <ScrollPane layoutX="60.0" layoutY="88.0" prefHeight="438.0" prefWidth="350.0" />
+	</children>
+</Pane>

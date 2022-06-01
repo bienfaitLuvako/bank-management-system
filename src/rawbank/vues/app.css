@@ -1,0 +1,30 @@
+
+.sidePane{
+	-fx-background-color: #F8F8F8;
+}
+
+.sidePaneBtn:hover, .loginForm{
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 8);
+}
+
+.mainPane{
+	-fx-background-color: #F2F2F2;
+}
+
+.cards{
+	-fx-background-radius: 0 0 10 10;
+}
+
+.cards:hover{
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 0, 8);
+}
+
+.evolutionCard{
+	-fx-background-radius: 30 0;
+}
+
+.Button{
+	-fx-border-color: #f8c90b;
+}
+
+

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.MainController">
+	<children>
+		<VBox prefHeight="650.0" prefWidth="130.0" styleClass="sidePane">
+			<children>
+				<Pane prefHeight="104.0" prefWidth="113.0">
+					<children>
+						<ImageView fitHeight="34.0" fitWidth="114.0" layoutX="3.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../../img/Rawbank_logo-300x101.png" />
+							</image>
+						</ImageView>
+					</children>
+				</Pane>
+				<HBox prefHeight="34.0" prefWidth="126.0">
+					<children>
+						<JFXButton fx:id="home" contentDisplay="GRAPHIC_ONLY" lineSpacing="10.0" onAction="#getHomePage" prefHeight="34.0" prefWidth="93.0" ripplerFill="WHITE" styleClass="sidePaneBtn">
+							<graphic>
+								<ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../../img/icones/decompresse.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+					</children>
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="34.0" prefWidth="130.0">
+					<children>
+						<JFXButton contentDisplay="GRAPHIC_ONLY" lineSpacing="10.0" onAction="#getServicesPage" prefHeight="34.0" prefWidth="95.0" ripplerFill="WHITE" styleClass="sidePaneBtn">
+							<graphic>
+								<ImageView fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../../img/icones/services.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+					</children>
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox layoutX="10.0" layoutY="560.0" prefHeight="34.0" prefWidth="130.0">
+					<children>
+						<JFXButton contentDisplay="GRAPHIC_ONLY" lineSpacing="10.0" onAction="#getAgencesPage" prefHeight="34.0" prefWidth="95.0" ripplerFill="WHITE" styleClass="sidePaneBtn">
+							<graphic>
+								<ImageView fitHeight="43.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../../img/icones/company-enterprise.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+					</children>
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox layoutX="10.0" layoutY="570.0" prefHeight="34.0" prefWidth="130.0">
+					<children>
+						<JFXButton contentDisplay="GRAPHIC_ONLY" lineSpacing="10.0" onAction="#getAgentsPage" prefHeight="34.0" prefWidth="95.0" ripplerFill="WHITE" styleClass="sidePaneBtn">
+							<graphic>
+								<ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../../img/icones/briefcase-icon-6288.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+					</children>
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox layoutX="10.0" layoutY="581.0" prefHeight="34.0" prefWidth="130.0">
+					<children>
+						<JFXButton contentDisplay="GRAPHIC_ONLY" lineSpacing="10.0" onAction="#getClientsPage" prefHeight="46.0" prefWidth="100.0" ripplerFill="WHITE" styleClass="sidePaneBtn">
+							<graphic>
+								<ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../../img/icones/clients.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+					</children>
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox layoutX="10.0" layoutY="594.0" prefHeight="34.0" prefWidth="130.0">
+					<children>
+						<JFXButton contentDisplay="GRAPHIC_ONLY" lineSpacing="10.0" onAction="#getSttetingsPage" prefHeight="50.0" prefWidth="95.0" ripplerFill="WHITE" styleClass="sidePaneBtn">
+							<graphic>
+								<ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../../img/icones/basic-gear-options-svgrepo-com.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+					</children>
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox layoutX="10.0" layoutY="603.0" prefHeight="34.0" prefWidth="130.0">
+					<children>
+						<JFXButton contentDisplay="GRAPHIC_ONLY" lineSpacing="10.0" onAction="#getHistoryPage" prefHeight="50.0" prefWidth="95.0" ripplerFill="WHITE" styleClass="sidePaneBtn">
+							<graphic>
+								<ImageView fitHeight="29.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../../img/icones/basic-outline-reset-clock-svgrepo-com.png" />
+									</image>
+								</ImageView>
+							</graphic>
+						</JFXButton>
+					</children>
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</HBox>
+			</children>
+		</VBox>
+		<Pane prefHeight="650.0" prefWidth="992.0" styleClass="mainPane">
+			<children>
+				<Pane layoutY="29.0" prefHeight="58.0" prefWidth="981.0">
+					<children>
+						<Label layoutX="57.0" layoutY="21.0" text="Good afternoon Bienfait !" textFill="#171717">
+							<font>
+								<Font name="Serif Regular" size="15.0" />
+							</font>
+						</Label>
+						<JFXRadioButton layoutX="669.0" layoutY="21.0" text="Email notifications">
+							<unSelectedColor>
+								<Color red="0.1315789520740509" green="0.12792398035526276" blue="0.12792398035526276" />
+							</unSelectedColor>
+							<font>
+								<Font name="Quicksand Light" size="13.0" />
+							</font>
+						</JFXRadioButton>
+						<JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="860.0" layoutY="-1.0" lineSpacing="10.0" prefHeight="58.0" prefWidth="93.0" ripplerFill="WHITE" />
+						<JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="819.0" layoutY="6.0" lineSpacing="10.0" prefHeight="34.0" prefWidth="58.0" ripplerFill="WHITE" />
+						<ImageView fitHeight="25.0" fitWidth="39.0" layoutX="808.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../../img/icones/email-notification.png" />
+							</image>
+						</ImageView>
+						<ImageView fitHeight="40.0" fitWidth="44.0" layoutX="867.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../../../img/icones/profile-ico.png" />
+							</image>
+						</ImageView>
+					</children>
+				</Pane>
+				<Pane fx:id="pageContent" layoutX="-4.0" layoutY="87.0" prefHeight="542.0" prefWidth="990.0" />
+			</children>
+		</Pane>
+	</children>
+</HBox>

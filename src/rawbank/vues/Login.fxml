@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.LoginController">
+   <children>
+      <Pane fx:id="loginPage" prefHeight="650.0" prefWidth="1100.0">
+         <children>
+            <ImageView fitHeight="93.0" fitWidth="358.0" layoutX="411.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Rawbank_logo-300x101.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="415.0" layoutY="535.0" text="Rawbank, la premiere banque au Congo!">
+               <font>
+                  <Font name="Serif Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="443.0" layoutY="202.0" text="Rawbank is my bank!">
+               <font>
+                  <Font name="Serif Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="398.0" layoutY="622.0" text="Designed and implemented by Bibu@luvako  copyright2022">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Pane layoutX="310.0" layoutY="248.0" prefHeight="244.0" prefWidth="490.0" styleClass="loginForm">
+               <children>
+                  <JFXTextArea fx:id="loginUsername" focusColor="#f8c90b" layoutX="73.0" layoutY="59.0" prefHeight="35.0" prefWidth="335.0" unFocusColor="#685c5c">
+                     <font>
+                        <Font name="Hack Regular" size="16.0" />
+                     </font></JFXTextArea>
+                  <JFXTextArea fx:id="loginPassword" focusColor="#f8c90b" layoutX="73.0" layoutY="108.0" prefHeight="36.0" prefWidth="335.0" unFocusColor="GREY">
+                     <font>
+                        <Font name="Hack Regular" size="16.0" />
+                     </font></JFXTextArea>
+                  <JFXButton fx:id="loginBtn" layoutX="74.0" layoutY="180.0" onAction="#loginBtnClicked" prefHeight="36.0" prefWidth="335.0" styleClass="Button" text="Login" textFill="#f8c90b">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="215.0" layoutY="28.0" text="Login" textAlignment="CENTER" textFill="#f8c90b">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>
