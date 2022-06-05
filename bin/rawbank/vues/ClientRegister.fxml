@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.ClientRegisterController">
+   <children>
+      <TextField fx:id="firstname" layoutX="55.0" layoutY="63.0" promptText="First Name" styleClass="textFields" stylesheets="@app.css" />
+      <TextField fx:id="lastname" layoutX="55.0" layoutY="106.0" promptText="Last Name" styleClass="textFields" stylesheets="@app.css" />
+      <TextField fx:id="phoneNumber" layoutX="265.0" layoutY="106.0" promptText="Phone Number (+243)" styleClass="textFields" stylesheets="@app.css" />
+      <ChoiceBox fx:id="gender" layoutX="113.0" layoutY="156.0" prefHeight="28.0" prefWidth="108.0" styleClass="textFields" stylesheets="@app.css" />
+      <Label layoutX="55.0" layoutY="166.0" text="Gender" />
+      <DatePicker fx:id="birthday" layoutX="265.0" layoutY="156.0" onAction="#chooseDate" prefHeight="36.0" prefWidth="166.0" promptText="Birthday" styleClass="textFields" stylesheets="@app.css" />
+      <Label fx:id="age" layoutX="273.0" layoutY="211.0" />
+      <TextField fx:id="nationalID" layoutX="265.0" layoutY="63.0" promptText="National ID" styleClass="textFields" stylesheets="@app.css" />
+      <JFXButton fx:id="clientRegisterBtn" layoutX="84.0" layoutY="361.0" onAction="#register" prefHeight="28.0" prefWidth="166.0" styleClass="Button" stylesheets="@app.css" text="Register" textFill="#f8c90b" />
+      <Label layoutX="133.0" layoutY="25.0" text="New Client Register Information" textFill="#d0a600">
+         <font>
+            <Font name="URWGothic-Book" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="cancelRegistrationBtn" layoutX="281.0" layoutY="361.0" onAction="#cancelRegistration" prefHeight="28.0" prefWidth="166.0" styleClass="Button" stylesheets="@app.css" text="Cancel" textFill="#f5420c" />
+      <Separator layoutX="124.0" layoutY="235.0" prefHeight="0.0" prefWidth="274.0" />
+      <Label layoutX="178.0" layoutY="247.0" text="Create Client Account(s)" textFill="#d0a600" />
+      <RadioButton fx:id="savingAccount" layoutX="261.0" layoutY="297.0" mnemonicParsing="false" styleClass="radioBtn" stylesheets="@app.css" text="Saving Account" textFill="#575756">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="currentAccount" layoutX="105.0" layoutY="297.0" mnemonicParsing="false" styleClass="radioBtn" stylesheets="@app.css" text="Current Account" textFill="#575756">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+   </children>
+</Pane>

@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.MainController">
+<HBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.MainController">
 	<children>
 		<VBox prefHeight="650.0" prefWidth="130.0" styleClass="sidePane">
 			<children>
@@ -170,7 +170,14 @@
 						</ImageView>
 					</children>
 				</Pane>
-				<Pane fx:id="pageContent" layoutX="-4.0" layoutY="87.0" prefHeight="542.0" prefWidth="990.0" />
+				<Pane fx:id="pageContent" layoutX="-1.0" layoutY="87.0" prefHeight="542.0" prefWidth="987.0">
+               <children>
+                  <Label layoutX="287.0" layoutY="528.0" text="Designed and implemented by Bibu@luvako  copyright2022">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
 			</children>
 		</Pane>
 	</children>

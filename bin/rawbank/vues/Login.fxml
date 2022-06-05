@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.LoginController">
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.LoginController">
    <children>
       <Pane fx:id="loginPage" prefHeight="650.0" prefWidth="1100.0">
          <children>
@@ -18,7 +19,7 @@
                   <Image url="@../../../img/Rawbank_logo-300x101.png" />
                </image>
             </ImageView>
-            <Label layoutX="415.0" layoutY="535.0" text="Rawbank, la premiere banque au Congo!">
+            <Label layoutX="415.0" layoutY="564.0" text="Rawbank, la premiere banque au Congo!">
                <font>
                   <Font name="Serif Italic" size="13.0" />
                </font>
@@ -33,17 +34,9 @@
                   <Font size="10.0" />
                </font>
             </Label>
-            <Pane layoutX="310.0" layoutY="248.0" prefHeight="244.0" prefWidth="490.0" styleClass="loginForm">
+            <Pane layoutX="310.0" layoutY="248.0" prefHeight="288.0" prefWidth="490.0" styleClass="loginForm">
                <children>
-                  <JFXTextArea fx:id="loginUsername" focusColor="#f8c90b" layoutX="73.0" layoutY="59.0" prefHeight="35.0" prefWidth="335.0" unFocusColor="#685c5c">
-                     <font>
-                        <Font name="Hack Regular" size="16.0" />
-                     </font></JFXTextArea>
-                  <JFXTextArea fx:id="loginPassword" focusColor="#f8c90b" layoutX="73.0" layoutY="108.0" prefHeight="36.0" prefWidth="335.0" unFocusColor="GREY">
-                     <font>
-                        <Font name="Hack Regular" size="16.0" />
-                     </font></JFXTextArea>
-                  <JFXButton fx:id="loginBtn" layoutX="74.0" layoutY="180.0" onAction="#loginBtnClicked" prefHeight="36.0" prefWidth="335.0" styleClass="Button" text="Login" textFill="#f8c90b">
+                  <JFXButton fx:id="loginBtn" layoutX="74.0" layoutY="215.0" onAction="#loginBtnClicked" prefHeight="36.0" prefWidth="335.0" styleClass="Button" text="Login" textFill="#f8c90b">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -53,6 +46,17 @@
                         <Font name="Serif Regular" size="20.0" />
                      </font>
                   </Label>
+                  <TextField alignment="CENTER" layoutX="74.0" layoutY="70.0" prefHeight="24.0" prefWidth="335.0" promptText="User name" styleClass="textFields">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField alignment="CENTER" layoutX="74.0" layoutY="122.0" prefHeight="24.0" prefWidth="335.0" promptText="Password" styleClass="textFields">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <RadioButton layoutX="284.0" layoutY="163.0" mnemonicParsing="false" styleClass="radioBtn" stylesheets="@app.css" text="Show Password" />
                </children>
             </Pane>
          </children>

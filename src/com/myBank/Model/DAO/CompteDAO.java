@@ -35,7 +35,7 @@ public class CompteDAO implements ImyBankDAO<Compte>{
 				stm = conn.createStatement();
 				rs = stm.executeQuery("SELECT * FROM compte");
 			
-				if(rs.next()) {
+				while(rs.next()) {
 					
 				 if(rs.getString(1).equals(p.getClass().getSimpleName()) && p.getClient().getId()==rs.getLong(9)) {
 					return true; 
@@ -65,8 +65,25 @@ public class CompteDAO implements ImyBankDAO<Compte>{
 	}
 
 	@Override
-	public boolean save(Compte t) {
-		// TODO Auto-generated method stub
+	public boolean save(Compte cmpt) {
+		try {
+			conn = DBConnexion.getConnection();
+			String requete  = "INSERT INTO compte(type_compte, numCompte, dateCreation, client_id) VALUES(?,?,?,?)";
+			pr = conn.prepareStatement(requete);
+			
+			pr.setString(1, cmpt.getClass().getSimpleName());
+			pr.setString(2, cmpt.getNumCompte());
+			pr.setString(3, cmpt.getDateCreation());
+			pr.setLong(4, cmpt.getClient().getId());
+			
+			pr.executeUpdate();
+		
+			pr.close();
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
 	}
 
@@ -87,5 +104,28 @@ public class CompteDAO implements ImyBankDAO<Compte>{
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
+//	private boolean accountNumbercodeExists(String accountNumberCode) {
+//		try {
+//			conn = DBConnexion.getConnection();
+//			stm = conn.createStatement();
+//			rs = stm.executeQuery("SELECT numCompte FROM compte");
+//		
+//			while(rs.next()) {	
+//				if(rs.getString(1).equals(accountNumberCode)) {
+//					
+//				}
+//			}
+//			
+//			stm.close();
+//			rs.close();
+//			
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		return false;
+//	}
+	
 
 }

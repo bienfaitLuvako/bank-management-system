@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
+import com.myBank.Model.DAO.AgentDAO;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -43,7 +44,8 @@ public class MainController implements Initializable{
 	
 	@FXML
 	public void getClientsPage(ActionEvent event) {
-		pageContent.getChildren().setAll(new ContentLoader().getContent("Home"));
+		
+		pageContent.getChildren().setAll(new ContentLoader().getContent("Clients"));
 	}
 	
 	@FXML

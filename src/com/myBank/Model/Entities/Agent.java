@@ -26,9 +26,9 @@ public class Agent extends Personne{
 	
 	
 
-	public Agent(Long id, String firstname, String lastname, String idNat, double age, String genre, String photo,
+	public Agent(Long id, String firstname, String lastname, String idNat, String birthday, String genre, String photo,
 			String phone, String numMat, String username, String password, Fonction fonctionEnCours) {
-		super(id, firstname, lastname, idNat, age, genre, photo, phone);
+		super(id, firstname, lastname, idNat, birthday, genre, photo, phone);
 		this.numMat = numMat;
 		this.username = username;
 		this.password = password;

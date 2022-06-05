@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.PersonCardController">
+   <children>
+      <Label fx:id="fullName" layoutX="24.0" layoutY="7.0" prefHeight="20.0" prefWidth="259.0" textFill="#5b5b5b">
+         <font>
+            <Font name="Lato Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="natId" layoutX="24.0" layoutY="28.0" prefHeight="16.0" prefWidth="259.0" textFill="#5e5e5e">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font></Label>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#ViewClientDetails" prefHeight="50.0" prefWidth="266.0" ripplerFill="WHITE" text="Button" />
+      <Line endX="227.0" layoutX="107.0" layoutY="50.0" startX="-107.0" stroke="#f8c90b" strokeWidth="0.3" />
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="295.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/icones/delete.png" />
+         </image>
+      </ImageView>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="281.0" prefHeight="50.0" prefWidth="49.0" ripplerFill="WHITE" />
+   </children>
+</Pane>

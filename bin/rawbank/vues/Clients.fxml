@@ -1,28 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="990.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="990.0" styleClass="mainPane" stylesheets="@app.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rawbank.controllers.ClientsController">
 	<children>
-				<Pane layoutX="60.0" layoutY="29.0" prefHeight="46.0" prefWidth="350.0" styleClass="sidePane,cards">
+				<Pane layoutX="43.0" layoutY="29.0" prefHeight="46.0" prefWidth="350.0">
 					<children>
-						<ImageView fitHeight="25.0" fitWidth="28.0" layoutX="84.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+						<ImageView fitHeight="25.0" fitWidth="28.0" layoutX="83.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
 							<image>
-								<Image url="@../../../img/icones/services.png" />
+								<Image url="@../../../img/icones/clients.png" />
 							</image>
 						</ImageView>
-						<Label layoutX="119.0" layoutY="23.0" text="Services" textFill="#171717">
+						<Label layoutX="118.0" layoutY="15.0" text="All clients here" textFill="#171717">
 							<font>
 								<Font name="Serif Regular" size="13.0" />
 							</font>
 						</Label>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="310.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/icones/refresh.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="refreshBtn" contentDisplay="GRAPHIC_ONLY" layoutX="305.0" onAction="#refreshClientsList" prefHeight="46.0" prefWidth="30.0" ripplerFill="WHITE" text="Button" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="277.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/icones/addIco.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="AddClientBtn" contentDisplay="GRAPHIC_ONLY" layoutX="273.0" onAction="#addClient" prefHeight="46.0" prefWidth="8.0" ripplerFill="WHITE" text="Button" />
 					</children>
+         <styleClass>
+            <String fx:value="sidePane" />
+            <String fx:value="headers" />
+         </styleClass>
 				</Pane>
-      <ScrollPane layoutX="60.0" layoutY="88.0" prefHeight="438.0" prefWidth="350.0" />
+      <ScrollPane layoutX="43.0" layoutY="88.0" prefHeight="438.0" prefWidth="350.0">
+         <content>
+            <VBox fx:id="clientsList" prefHeight="456.0" prefWidth="332.0" />
+         </content>
+         <styleClass>
+            <String fx:value="cards" />
+            <String fx:value="scrollPane" />
+         </styleClass></ScrollPane>
+      <Pane layoutX="430.0" layoutY="29.0" prefHeight="46.0" prefWidth="521.0">
+         <children>
+            <Label fx:id="ClientIdentifiers" layoutX="183.0" layoutY="15.0" text="Client Inforamtion here" textFill="#171717">
+               <font>
+                  <Font name="Serif Regular" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="headers" />
+            <String fx:value="sidePane" />
+         </styleClass>
+      </Pane>
+      <Pane fx:id="actionPanel" layoutX="430.0" layoutY="88.0" prefHeight="438.0" prefWidth="521.0">
+         <children>
+            <Label layoutX="130.0" layoutY="211.0" text="Click in a client field to view information">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <styleClass>
+            <String fx:value="sidePane" />
+            <String fx:value="scrollPane" />
+         </styleClass></Pane>
 	</children>
 </Pane>

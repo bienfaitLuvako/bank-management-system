@@ -10,7 +10,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		Parent root = FXMLLoader.load(getClass().getResource("/rawbank/vues/Login.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("/rawbank/vues/Main.fxml"));
 		Scenes.primaryStage = primaryStage;
 		Scenes.launchScene(root);
 

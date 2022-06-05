@@ -1,12 +1,10 @@
 package com.myBank.Model.Entities;
 
-import java.util.Date;
-
 public class CompteCourant extends Compte{
 
 	private double decouvert;
 
-	public CompteCourant(Long id, String numCompte, Date dateCreation, double solde, double interetDu, Client client,
+	public CompteCourant(Long id, String numCompte, String dateCreation, double solde, double interetDu, Client client,
 			double decouvert) {
 		super(id, numCompte, dateCreation, solde, interetDu, client);
 		this.decouvert = decouvert;

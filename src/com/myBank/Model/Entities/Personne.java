@@ -8,20 +8,20 @@ public class Personne {
 	private String firstname;
 	private String lastname;
 	private String idNat;
-	private double age;
+	private String birthday;
 	private String genre;
 	private String photo;
 	private String phone;
 	
 	
-	public Personne(Long id, String firstname, String lastname, String idNat, double age, String genre, String photo,
+	public Personne(Long id, String firstname, String lastname, String idNat, String birthday, String genre, String photo,
 			String phone) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.idNat = idNat;
-		this.age = age;
+		this.birthday = birthday;
 		this.genre = genre;
 		this.photo = photo;
 		this.phone = phone;
@@ -82,14 +82,14 @@ public class Personne {
 	/**
 	 * @return the age
 	 */
-	public double getAge() {
-		return age;
+	public String getBirthday() {
+		return birthday;
 	}
 	/**
 	 * @param age the age to set
 	 */
-	public void setAge(double age) {
-		this.age = age;
+	public void setAge(String birthday) {
+		this.birthday = birthday;
 	}
 	/**
 	 * @return the genre

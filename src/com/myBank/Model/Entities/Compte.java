@@ -1,19 +1,18 @@
 package com.myBank.Model.Entities;
 
-import java.util.Date;
 import java.util.List;
 
 public class Compte {
 	private Long id;
 	private String numCompte;
-	private Date dateCreation;
+	private String dateCreation;
 	private double solde;
 	private double interetDu;
 	private Client client;
 	
 	private List<Operation> operations;
 	
-	public Compte(Long id, String numCompte, Date dateCreation, double solde, double interetDu, Client client){
+	public Compte(Long id, String numCompte, String dateCreation, double solde, double interetDu, Client client){
 		super();
 		this.id = id;
 		this.numCompte = numCompte;
@@ -49,13 +48,13 @@ public class Compte {
 	/**
 	 * @return the dateCreation
 	 */
-	public Date getDateCreation() {
+	public String getDateCreation() {
 		return dateCreation;
 	}
 	/**
 	 * @param dateCreation the dateCreation to set
 	 */
-	public void setDateCreation(Date dateCreation) {
+	public void setDateCreation(String dateCreation) {
 		this.dateCreation = dateCreation;
 	}
 	/**

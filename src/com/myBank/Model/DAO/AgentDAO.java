@@ -23,7 +23,7 @@ public class AgentDAO extends PersonneDAO{
 		
 			if(rs.next()) {
 				
-			 if(rs.getString(1).equals(p.getClass().getSimpleName()) && p.getId()==rs.getInt(2) && p.getAge()==rs.getDouble(3) && p.getFirstname().equals(rs.getString(4)) && p.getGenre().equals(rs.getString(5)) &&  p.getIdNat().equals(rs.getString(6)) && p.getLastname().equals(rs.getString(7)) && p.getPhone().equals(rs.getString(8)) && p.getNumMat().equals(rs.getString(10)) && p.getUsername().equals(rs.getString(11)) && p.getPassword().equals(rs.getString(12))) {
+			 if(rs.getString(1).equals(p.getClass().getSimpleName()) && p.getId()==rs.getInt(2) && p.getBirthday()==rs.getString(3) && p.getFirstname().equals(rs.getString(4)) && p.getGenre().equals(rs.getString(5)) &&  p.getIdNat().equals(rs.getString(6)) && p.getLastname().equals(rs.getString(7)) && p.getPhone().equals(rs.getString(8)) && p.getNumMat().equals(rs.getString(10)) && p.getUsername().equals(rs.getString(11)) && p.getPassword().equals(rs.getString(12))) {
 				return true; 
 			 }
 			}
@@ -71,7 +71,7 @@ public class AgentDAO extends PersonneDAO{
 			pr = conn.prepareStatement(requete);
 			
 			pr.setString(1, ag.getClass().getSimpleName());
-			pr.setDouble(2, ag.getAge());
+			pr.setString(2, ag.getBirthday());
 			pr.setString(3, ag.getFirstname());
 			pr.setString(4, ag.getGenre());
 			pr.setString(5, ag.getIdNat());

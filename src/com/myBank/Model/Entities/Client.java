@@ -3,13 +3,14 @@ package com.myBank.Model.Entities;
 import java.util.List;
 
 public class Client extends Personne{
-	private List<Compte> comptes;
+	private Compte savingAccount;
+	private Compte CurrentAccount;
 	
 	private List<Operation> operations;
 
-	public Client(Long id, String firstname, String lastname, String idNat, double age, String genre, String photo,
+	public Client(Long id, String firstname, String lastname, String idNat, String birthday, String genre, String photo,
 			String phone) {
-		super(id, firstname, lastname, idNat, age, genre, photo, phone);
+		super(id, firstname, lastname, idNat, birthday, genre, photo, phone);
 	}
 	
 	
@@ -20,21 +21,6 @@ public class Client extends Personne{
 	}
 
 
-
-	/**
-	 * @return the comptes
-	 */
-	public List<Compte> getComptes() {
-		return comptes;
-	}
-
-	/**
-	 * @param comptes the comptes to set
-	 */
-	public void setComptes(List<Compte> comptes) {
-		this.comptes = comptes;
-	}
-
 	public List<Operation> getOperations() {
 		return operations;
 	}
@@ -43,9 +29,29 @@ public class Client extends Personne{
 		this.operations = operations;
 	}
 
-	
-	
 
+
+	public Compte getSavingAccount() {
+		return savingAccount;
+	}
+
+
+
+	public void setSavingAccount(Compte savingAccount) {
+		this.savingAccount = savingAccount;
+	}
+
+
+
+	public Compte getCurrentAccount() {
+		return CurrentAccount;
+	}
+
+
+
+	public void setCurrentAccount(Compte currentAccount) {
+		CurrentAccount = currentAccount;
+	}
 	
 }
 

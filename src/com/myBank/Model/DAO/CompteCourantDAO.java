@@ -17,24 +17,6 @@ public class CompteCourantDAO extends CompteDAO{
 	PreparedStatement pr = null;
 	
 	public boolean save(Compte cmpt) {
-		try {
-			conn = DBConnexion.getConnection();
-			String requete  = "INSERT INTO compte(type_compte, numCompte, dateCreation, client_id) VALUES(?,?,?,?)";
-			pr = conn.prepareStatement(requete);
-			
-			pr.setString(1, cmpt.getClass().getSimpleName());
-			pr.setString(2, cmpt.getNumCompte());
-			pr.setDate(3, (Date) cmpt.getDateCreation());
-			pr.setLong(4, cmpt.getClient().getId());
-			
-			pr.executeUpdate();
-		
-			pr.close();
-			return true;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return false;
+	return false;
 	}
 }
